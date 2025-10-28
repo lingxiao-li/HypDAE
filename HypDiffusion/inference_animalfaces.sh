@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=3 python inference_for_eva.py --config_path ./configs/stable-diffusion/v2_inference_animalfaces.yaml \
+                                           --ckpt /data2/mhf/DXL/Lingxiao/Codes/Paint-by-Example-test/models/Paint-by-Example/animal_faces/2024-09-11T11-30-12_v1/checkpoints/epoch=000037.ckpt \
+                                           --image_folder /data2/mhf/DXL/Lingxiao/datasets/animals_eva/test_30/train \
+                                           --outdir ./outputs/animals_eva_genrated_cfg_1.3_strength_1.0_r_6.0_10_samples_6_each \
+                                           --n_classes 30 \
+                                           --n_samples 3 \
+                                           --n_perturb_samples 1 \
+                                           --n_selected 10 \
+                                           --scale 1.3 \
+                                           --strength 1.0 \
+                                           --hyp_radius 6.0 \
+                                           --skip_grid \
+                                           --precision autocast \
+                                           --seed 3408

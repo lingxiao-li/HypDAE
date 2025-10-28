@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=1 python inference_for_eva.py --config_path ./configs/stable-diffusion/v2_inference_nabirds.yaml \
+                                           --ckpt /data2/mhf/DXL/Lingxiao/Codes/Paint-by-Example-test/models/Paint-by-Example/nabirds/2024-10-17T10-15-57_v1/checkpoints/epoch=000083.ckpt \
+                                           --image_folder /data2/mhf/DXL/Lingxiao/datasets/nabirds_eva/test \
+                                           --outdir ./outputs/nabirds_eva_genrated_cfg_1.3_strength_0.95_r_5.6_30_samples_6_each \
+                                           --n_classes 111 \
+                                           --n_samples 3 \
+                                           --n_perturb_samples 1 \
+                                           --n_selected 30 \
+                                           --scale 1.3 \
+                                           --strength 0.95 \
+                                           --hyp_radius 5.6 \
+                                           --skip_grid \
+                                           --precision autocast \
+                                           --seed 3408

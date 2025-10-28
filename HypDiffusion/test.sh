@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=2 python scripts/test_tf_icon.py  --ckpt /data2/mhf/DXL/Lingxiao/Codes/Paint-by-Example-test/models/Paint-by-Example/2024-09-11T11-30-12_v1/checkpoints/epoch=000022.ckpt      \
+                                --config ./configs/stable-diffusion/v1.yaml \
+                                --root ./inputs/same_domain_test       \
+                                --domain 'same'                   \
+                                --dpm_steps 100                    \
+                                --dpm_order 2                     \
+                                --scale 2.5                       \
+                                --tau_a 0.4                       \
+                                --tau_b 0.8                       \
+                                --outdir ./outputs                \
+                                --gpu cuda:0                      \
+                                --seed 3407                         

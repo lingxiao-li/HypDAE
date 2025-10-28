@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=3 python inference_for_eva.py --config_path ./configs/stable-diffusion/v2_inference_flowers.yaml \
+                                           --ckpt /data2/mhf/DXL/Lingxiao/Codes/Paint-by-Example-test/models/Paint-by-Example/flowers/2024-10-12T05-45-07_v1/checkpoints/epoch=000298.ckpt \
+                                           --image_folder /data2/mhf/DXL/Lingxiao/datasets/flowers_eva_random/test \
+                                           --outdir ./outputs/flowers_eva_random_genrated_cfg_1.7_strength_0.95_r_5.5_10_samples_12_each \
+                                           --n_classes 17 \
+                                           --n_samples 4 \
+                                           --n_perturb_samples 2 \
+                                           --n_selected 10 \
+                                           --scale 1.7 \
+                                           --strength 0.95 \
+                                           --hyp_radius 5.5 \
+                                           --skip_grid \
+                                           --precision autocast \
+                                           --seed 3408
