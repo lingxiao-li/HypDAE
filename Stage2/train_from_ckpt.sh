@@ -1,0 +1,30 @@
+CUDA_VISIBLE_DEVICES=2 python scripts/train.py \
+--dataset_type=ffhq_encode \
+--checkpoint_path=/data2/mhf/DXL/Lingxiao/Codes/hyperediting/exp_out/hyper_styleGANinversion_ffhq_512_5_30_init_v3/checkpoints/iteration_31000.pt \
+--exp_dir=/data2/mhf/DXL/Lingxiao/Codes/hyperediting/exp_out/hyper_styleGANinversion_ffhq_512_5_30_init_v5 \
+--learning_rate=0.0001 \
+--step_size=500 \
+--gamma=0.7 \
+--train_all \
+--feature_size=512 \
+--transformer_layers=30 \
+--c=0.1 \
+--workers=128 \
+--batch_size=256 \
+--test_batch_size=256 \
+--test_workers=128 \
+--val_interval=800000 \
+--save_interval=1000 \
+--max_steps=10000 \
+--progressive_start=10000 \
+--encoder_type=CLIPImageEmbedder \
+--optim_name=adam \
+--hyperbolic=True \
+--hyperbolic_lambda=0.0 \
+--reverse_lambda=5 \
+--ngpus-per-node 1 \
+--dist-url 'tcp://localhost:10020' \
+--multiprocessing-distributed \
+--dist-backend nccl \
+--world-size 1 \
+--rank 0
