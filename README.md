@@ -48,18 +48,7 @@ Few-shot image generation aims to generate diverse and high-quality images for a
 
 </div>
 
-## Contents
-  - [Setup](#setup)
-    - [Option 1: Using Conda](#option-1-using-conda)
-  - [Running TF-ICON](#running-tf\-icon)
-    - [Data Preparation](#data-preparation)
-    - [Image Composition](#image-composition)
-  - [TF-ICON Test Benchmark](#tf\-icon-test-benchmark)
-  - [Acknowledgments](#acknowledgments)
-  - [Citation](#citation)
 
-
-<br>
 
 ## Setup
 
@@ -77,7 +66,7 @@ conda env create -f hypdae_env.yaml.yaml
 conda activate hypdae
 ```
 
-### Downloading Stable-Diffusion Weights
+### Downloading HypDAE Weights
 
 Download the pre-trained HypDAE checkpoints from [HuggingFace](https://huggingface.co/lingxiao2049/HypDAE).
 
